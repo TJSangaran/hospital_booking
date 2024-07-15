@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: "transparent";
+  /* #212032; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1178f880;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1178f8;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+div .button {
+  margin: 0 15px 15px 0;
+}
+.video-contain video {
+  object-fit: contain;
+  overflow:hidden
+}
+textarea:focus{
+  outline: none;
+  border-color: none;
+  box-shadow: none;
+}
+
+input:focus-visible{
+  outline: none;
+  border-color: none;
+  box-shadow: none;
+}
+
+.video-cover video {
+  position: absolute;
+  object-fit: cover;
+  
+}
+
+input[type="radio"]:checked + label span {
+background-color: #fff; 
+box-shadow: 0px 0px 0px 2px black inset;
+}
+
+
+input[type="radio"]:checked + label{
+ color: #fff; 
+}
+
+
+.flying-emojis {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  z-index: 99;
+}
+.emoji {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  font-size: 48px;
+  line-height: 1;
+  width: 48px;
+  height: 48px;
+}
+.emoji.wiggle-1 {
+  animation: emerge 3s forwards,
+    wiggle-1 1s ease-in-out infinite alternate;
+}
+.emoji.wiggle-2 {
+  animation: emerge 3s forwards,
+    wiggle-2 1s ease-in-out infinite alternate;
+}
+@keyframes emerge {
+  to {
+    bottom: 85%;
+    opacity: 0;
+  }
+}
+@keyframes wiggle-1 {
+  from {
+    margin-left: -50px;
+  }
+  to {
+    margin-left: 50px;
+  }
+}
+@keyframes wiggle-2 {
+  from {
+    margin-left: 50px;
+  }
+  to {
+    margin-left: -50px;
+  }
+}
+
+/* .bg-purple-350{
+  background-color: rgb(216 180 254);
+}
+
+.bg-gray-650{
+  background-color: rgb(75 85 99);
+} */
+
